@@ -60,8 +60,8 @@
 		4786ED141AE2D9EA00929BD9 /* WPStateMachineImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4786ED131AE2D9EA00929BD9 /* WPStateMachineImp.m */; };
 		4786ED1B1AE2DB7E00929BD9 /* WPSplashStateImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4786ED1A1AE2DB7E00929BD9 /* WPSplashStateImp.m */; };
 		4786ED211AE2DF1E00929BD9 /* WPSplashViewModelImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4786ED201AE2DF1E00929BD9 /* WPSplashViewModelImp.m */; };
-		773E9A071D74FF855947B55E /* libPods-Wordpress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201F8ADE350358FD00AF60D7 /* libPods-Wordpress.a */; };
-		E0D98095AE472232185F5CBA /* libPods-WordpressTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD399AB25E2754D292BF3F2 /* libPods-WordpressTests.a */; };
+		B62ED82F3BAE5141E6B8F338 /* libPods-WordpressTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB504742C33696FDECF19A1 /* libPods-WordpressTests.a */; };
+		BE1EEBC8A6039407B924A43A /* libPods-Wordpress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0AB82D3BC78EE6C179BFB2 /* libPods-Wordpress.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		201F8ADE350358FD00AF60D7 /* libPods-Wordpress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wordpress.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		046BE879C820E6CDC4EC2696 /* Pods-Wordpress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordpress.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordpress/Pods-Wordpress.debug.xcconfig"; sourceTree = "<group>"; };
+		21BC98C0DF8DAF9CCFB13C1D /* Pods-Wordpress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordpress.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordpress/Pods-Wordpress.release.xcconfig"; sourceTree = "<group>"; };
 		47084DB41AE2E27400EBCE55 /* RACSignal+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+Extension.h"; sourceTree = "<group>"; };
 		47084DB51AE2E27400EBCE55 /* RACSignal+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+Extension.m"; sourceTree = "<group>"; };
 		47084DB71AE2F13300EBCE55 /* UIActivityIndicatorView+Animated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+Animated.h"; sourceTree = "<group>"; };
@@ -194,11 +195,10 @@
 		4786ED1E1AE2DE7B00929BD9 /* WPSplashViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSplashViewModel.h; sourceTree = "<group>"; };
 		4786ED1F1AE2DF1E00929BD9 /* WPSplashViewModelImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSplashViewModelImp.h; sourceTree = "<group>"; };
 		4786ED201AE2DF1E00929BD9 /* WPSplashViewModelImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSplashViewModelImp.m; sourceTree = "<group>"; };
-		4C0F093EBB11579D5EE8DEA0 /* Pods-WordpressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordpressTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordpressTests/Pods-WordpressTests.release.xcconfig"; sourceTree = "<group>"; };
-		ADA8E31BA11BE7095F813C1F /* Pods-WordpressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordpressTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordpressTests/Pods-WordpressTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D6E17668CEA29657512D7E7C /* Pods-Wordpress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordpress.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wordpress/Pods-Wordpress.debug.xcconfig"; sourceTree = "<group>"; };
-		F23A3ADAA0C46EF1B7C2FCE6 /* Pods-Wordpress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordpress.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wordpress/Pods-Wordpress.release.xcconfig"; sourceTree = "<group>"; };
-		FDD399AB25E2754D292BF3F2 /* libPods-WordpressTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordpressTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE30F9915364DF10303403D /* Pods-WordpressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordpressTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordpressTests/Pods-WordpressTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADAC9EFD94391307FC828B76 /* Pods-WordpressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordpressTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordpressTests/Pods-WordpressTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCB504742C33696FDECF19A1 /* libPods-WordpressTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WordpressTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0AB82D3BC78EE6C179BFB2 /* libPods-Wordpress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wordpress.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				773E9A071D74FF855947B55E /* libPods-Wordpress.a in Frameworks */,
+				BE1EEBC8A6039407B924A43A /* libPods-Wordpress.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,22 +214,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0D98095AE472232185F5CBA /* libPods-WordpressTests.a in Frameworks */,
+				B62ED82F3BAE5141E6B8F338 /* libPods-WordpressTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		056019EEF0027A99663A97B4 /* Pods */ = {
+		13251100A1B8DA79E96090DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D6E17668CEA29657512D7E7C /* Pods-Wordpress.debug.xcconfig */,
-				F23A3ADAA0C46EF1B7C2FCE6 /* Pods-Wordpress.release.xcconfig */,
-				ADA8E31BA11BE7095F813C1F /* Pods-WordpressTests.debug.xcconfig */,
-				4C0F093EBB11579D5EE8DEA0 /* Pods-WordpressTests.release.xcconfig */,
+				DE0AB82D3BC78EE6C179BFB2 /* libPods-Wordpress.a */,
+				BCB504742C33696FDECF19A1 /* libPods-WordpressTests.a */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		47084DC61AE38BFA00EBCE55 /* Components */ = {
@@ -258,8 +256,8 @@
 				4757C4D51A533EBC002AD7A2 /* Wordpress */,
 				4757C4EF1A533EBC002AD7A2 /* WordpressTests */,
 				4757C4D41A533EBC002AD7A2 /* Products */,
-				056019EEF0027A99663A97B4 /* Pods */,
-				67B77CCC5243F88B9ACE190C /* Frameworks */,
+				F760A38D522ADC7C433472FE /* Pods */,
+				13251100A1B8DA79E96090DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -518,13 +516,15 @@
 			path = Signatures;
 			sourceTree = "<group>";
 		};
-		67B77CCC5243F88B9ACE190C /* Frameworks */ = {
+		F760A38D522ADC7C433472FE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				201F8ADE350358FD00AF60D7 /* libPods-Wordpress.a */,
-				FDD399AB25E2754D292BF3F2 /* libPods-WordpressTests.a */,
+				046BE879C820E6CDC4EC2696 /* Pods-Wordpress.debug.xcconfig */,
+				21BC98C0DF8DAF9CCFB13C1D /* Pods-Wordpress.release.xcconfig */,
+				4AE30F9915364DF10303403D /* Pods-WordpressTests.debug.xcconfig */,
+				ADAC9EFD94391307FC828B76 /* Pods-WordpressTests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,11 +534,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4757C4F61A533EBC002AD7A2 /* Build configuration list for PBXNativeTarget "Wordpress" */;
 			buildPhases = (
-				E87BAB596E3C57B904263D56 /* Check Pods Manifest.lock */,
+				1601E8F5AA4EB6CE110313E7 /* [CP] Check Pods Manifest.lock */,
 				4757C4CF1A533EBC002AD7A2 /* Sources */,
 				4757C4D01A533EBC002AD7A2 /* Frameworks */,
 				4757C4D11A533EBC002AD7A2 /* Resources */,
-				A99CD62551A08911909E70D4 /* Copy Pods Resources */,
+				8A74E1B6047E9467826B33E7 /* [CP] Embed Pods Frameworks */,
+				3DB08D53776153619634CA54 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -553,11 +554,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4757C4F91A533EBC002AD7A2 /* Build configuration list for PBXNativeTarget "WordpressTests" */;
 			buildPhases = (
-				FAC5565B00193165E72C9794 /* Check Pods Manifest.lock */,
+				DE232431D1997149709AECB3 /* [CP] Check Pods Manifest.lock */,
 				4757C4E81A533EBC002AD7A2 /* Sources */,
 				4757C4E91A533EBC002AD7A2 /* Frameworks */,
 				4757C4EA1A533EBC002AD7A2 /* Resources */,
-				41EF8BB691A7CE36B20ED666 /* Copy Pods Resources */,
+				F735A6A31D41EB4826441B32 /* [CP] Embed Pods Frameworks */,
+				BB5E52B320219024DDC4822F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -576,7 +578,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WP;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Evgeniy Yurtaev";
 				TargetAttributes = {
 					4757C4D21A533EBC002AD7A2 = {
@@ -627,29 +629,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		41EF8BB691A7CE36B20ED666 /* Copy Pods Resources */ = {
+		1601E8F5AA4EB6CE110313E7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordpressTests/Pods-WordpressTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A99CD62551A08911909E70D4 /* Copy Pods Resources */ = {
+		3DB08D53776153619634CA54 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,34 +659,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wordpress/Pods-Wordpress-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E87BAB596E3C57B904263D56 /* Check Pods Manifest.lock */ = {
+		8A74E1B6047E9467826B33E7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wordpress/Pods-Wordpress-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FAC5565B00193165E72C9794 /* Check Pods Manifest.lock */ = {
+		BB5E52B320219024DDC4822F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordpressTests/Pods-WordpressTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE232431D1997149709AECB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F735A6A31D41EB4826441B32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordpressTests/Pods-WordpressTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -790,15 +822,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -831,8 +867,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -840,6 +878,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -855,33 +894,35 @@
 		};
 		4757C4F71A533EBC002AD7A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6E17668CEA29657512D7E7C /* Pods-Wordpress.debug.xcconfig */;
+			baseConfigurationReference = 046BE879C820E6CDC4EC2696 /* Pods-Wordpress.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wordpress/Wordpress-Prefix.pch";
 				INFOPLIST_FILE = Wordpress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Evgeniy-Yurtaev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		4757C4F81A533EBC002AD7A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F23A3ADAA0C46EF1B7C2FCE6 /* Pods-Wordpress.release.xcconfig */;
+			baseConfigurationReference = 21BC98C0DF8DAF9CCFB13C1D /* Pods-Wordpress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wordpress/Wordpress-Prefix.pch";
 				INFOPLIST_FILE = Wordpress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Evgeniy-Yurtaev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		4757C4FA1A533EBC002AD7A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADA8E31BA11BE7095F813C1F /* Pods-WordpressTests.debug.xcconfig */;
+			baseConfigurationReference = 4AE30F9915364DF10303403D /* Pods-WordpressTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -894,6 +935,7 @@
 				);
 				INFOPLIST_FILE = WordpressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Evgeniy-Yurtaev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordpress.app/Wordpress";
 			};
@@ -901,7 +943,7 @@
 		};
 		4757C4FB1A533EBC002AD7A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C0F093EBB11579D5EE8DEA0 /* Pods-WordpressTests.release.xcconfig */;
+			baseConfigurationReference = ADAC9EFD94391307FC828B76 /* Pods-WordpressTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -910,6 +952,7 @@
 				);
 				INFOPLIST_FILE = WordpressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Evgeniy-Yurtaev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wordpress.app/Wordpress";
 			};

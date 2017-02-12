@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPStateMachineImp.h"
 
@@ -22,6 +22,11 @@
 
 @implementation WPStateMachine
 
+- (instancetype)init
+{
+    return [self initWithStartState:nil];
+}
+
 - (instancetype)initWithStartState:(id)startState
 {
     self = [super init];
@@ -32,7 +37,7 @@
         @weakify(self);
         self.stateChanged = [[[[[self.changeStateSubject
             takeUntil:self.rac_willDeallocSignal]
-            flattenMap:^RACStream *(RACSignal *value) {
+            flattenMap:^RACSignal *(RACSignal *value) {
                 return [value
                     catch:^RACSignal *(NSError *error) {
                         @strongify(self);

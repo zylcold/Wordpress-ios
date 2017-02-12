@@ -7,7 +7,7 @@
 //
 
 #import <libextobjc/extobjc.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "AppDelegate.h"
 #import "WPNavigationController.h"

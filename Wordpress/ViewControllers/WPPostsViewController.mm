@@ -7,7 +7,7 @@
 //
 
 #import <ComponentKit/ComponentKit.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
 #import "WPPostsViewController.h"
@@ -34,11 +34,26 @@
 
 - (instancetype)initWithPostsViewModel:(id<WPPostsViewModel>)viewModel
 {
-    self = [super init];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.viewModel = viewModel;
     }
     return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    return [self initWithPostsViewModel:nil];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    return [self initWithPostsViewModel:nil];
+}
+
+- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout
+{
+    return [self initWithPostsViewModel:nil];
 }
 
 - (void)loadView

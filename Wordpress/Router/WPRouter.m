@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPRouter.h"
 #import "WPNavigationController.h"
@@ -35,6 +35,11 @@
     }
     
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithWindow:nil];
 }
 
 #pragma mark - Private methods

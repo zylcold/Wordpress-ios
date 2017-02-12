@@ -61,13 +61,7 @@ PODS:
     - Mantle/extobjc (= 1.5.4)
   - Mantle/extobjc (1.5.4)
   - OCMock (3.1.2)
-  - ReactiveCocoa (2.4.7):
-    - ReactiveCocoa/UI (= 2.4.7)
-  - ReactiveCocoa/Core (2.4.7):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.4.7)
-  - ReactiveCocoa/UI (2.4.7):
-    - ReactiveCocoa/Core
+  - ReactiveObjC (2.1.2)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
@@ -82,7 +76,7 @@ DEPENDENCIES:
   - libextobjc (~> 0.4.1)
   - Mantle (~> 1.5.1)
   - OCMock (~> 3.1.1)
-  - ReactiveCocoa (~> 2.4.2)
+  - ReactiveObjC (~> 2.1.2)
   - SDWebImage (~> 3.7.1)
   - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
   - SVProgressHUD (~> 1.1.2)
@@ -105,10 +99,12 @@ SPEC CHECKSUMS:
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
   OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
-  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
+  ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
-  Specta: d2158a483ad179e5f8d3a29f75ff4fc0ff6fab16
+  Specta: 373ce98f17f35069903ff7afac3b29ad9cc04893
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 
-COCOAPODS: 0.37.2
+PODFILE CHECKSUM: 3803b034a264ec9d1b0fbfb651aefba7a552152c
+
+COCOAPODS: 1.1.0.rc.2

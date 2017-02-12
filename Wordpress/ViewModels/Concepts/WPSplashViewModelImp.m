@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPSplashViewModelImp.h"
 #import "WPStateMachineImp.h"
@@ -56,7 +56,7 @@
         doNext:^(WPSite *site) {
             [WPClient sharedInstance].currentSite = site;
         }]
-        flattenMap:^RACStream *(WPSite *site) {
+        flattenMap:^RACSignal *(WPSite *site) {
             return [self.router presentStartScreenWithSite:site];
         }]
         initially:^{

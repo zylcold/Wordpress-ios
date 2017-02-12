@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPSessionManager.h"
 #import "WPObjectsSerializer.h"
@@ -94,7 +94,7 @@ static WPSessionManager *_sharedInstance;
             return [RACSignal combineLatest:@[ URLSignal, paramsSignal ]];
         }]
         // Serialize URL request. (NSURL, NSDictionary) -> RACSignal NSURLRequest
-        flattenMap:^RACStream *(RACTuple *value) {
+        flattenMap:^RACSignal *(RACTuple *value) {
             
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 
@@ -117,9 +117,9 @@ static WPSessionManager *_sharedInstance;
             }];
         }]
         // Send request and serialize response object. NSURLRequest -> RACSignal {request.class.responceClass}
-        flattenMap:^RACStream *(NSURLRequest *URLRequest) {
+        flattenMap:^RACSignal *(NSURLRequest *URLRequest) {
             return [[[[self rac_dataTaskWithRequest:URLRequest]
-                flattenMap:^RACStream *(NSDictionary *responseDictionary) {
+                flattenMap:^RACSignal *(NSDictionary *responseDictionary) {
                     
                     return [self.objectsSerializer rac_serializeWithObjectClass:[[request class] responseClass] fromDictionary:responseDictionary];
                 }]
@@ -145,8 +145,10 @@ static WPSessionManager *_sharedInstance;
     return [[[RACSignal defer:^RACSignal *{
             return [self.objectsSerializer rac_deserializeObject:routeObject];
         }]
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
         aggregateWithStart:nil reduce:^id(NSDictionary *running, NSDictionary *next) {
-            
+#pragma clang diagnostic pop
             NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:running];
             [result addEntriesFromDictionary:next];
             

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPPostViewModelImp.h"
 #import "WPPostStateImp.h"
@@ -24,6 +24,11 @@
 @end
 
 @implementation WPPostViewModel
+
+- (instancetype)init
+{
+    return [self initWithPost:nil];
+}
 
 - (instancetype)initWithPost:(WPPost *)post
 {
@@ -53,7 +58,7 @@
 
             return [[WPClient sharedInstance] performRequest:request];
         }]
-        flattenMap:^RACStream *(WPPost *value) {
+        flattenMap:^__kindof RACSignal * _Nullable(WPPost *value) {
             return [self.stateMachine pushTransition:^WPPostState*(WPPostState *state) {
                 return [state stateBySettingPost:value];
             }];

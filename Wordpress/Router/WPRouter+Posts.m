@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPRouter+Posts.h"
 #import "WPPostsViewModelImp.h"

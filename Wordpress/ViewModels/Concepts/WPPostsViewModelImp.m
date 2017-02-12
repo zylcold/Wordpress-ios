@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPPostsViewModelImp.h"
 #import "WPPostsStateImp.h"
@@ -32,6 +32,11 @@ static NSInteger WPPostsPageSize = 25;
 
 @implementation WPPostsViewModel
 
+- (instancetype)init
+{
+    return [self initWithSite:nil];
+}
+
 - (instancetype)initWithSite:(WPSite *)site
 {
     self = [super init];
@@ -55,7 +60,7 @@ static NSInteger WPPostsPageSize = 25;
 - (RACSignal *)reloadData
 {
     return [[self loadPostsWithSite:self.site offset:0 pageSize:WPPostsPageSize]
-        flattenMap:^RACStream *(WPPostsResponse *value) {
+        flattenMap:^RACSignal *(WPPostsResponse *value) {
             BOOL nextPageExist = ([value.posts count] < [[value totalObjects] integerValue]);
 
             return [self.stateMachine pushTransition:^id(WPPostsState *state) {
@@ -69,11 +74,11 @@ static NSInteger WPPostsPageSize = 25;
 
 - (RACSignal *)loadNextPage
 {
-    return [[self.stateMachine.stateChanged take:1] flattenMap:^RACStream *(WPPostsState *value) {
+    return [[self.stateMachine.stateChanged take:1] flattenMap:^RACSignal *(WPPostsState *value) {
         NSInteger offset = [value.posts.array count];
 
         return [[self loadPostsWithSite:self.site offset:offset pageSize:WPPostsPageSize]
-            flattenMap:^RACStream *(WPPostsResponse *value) {
+            flattenMap:^RACSignal *(WPPostsResponse *value) {
                 BOOL nextPageExist = (offset + [value.posts count] < [[value totalObjects] integerValue]);
 
                 return [self.stateMachine pushTransition:^id(WPPostsState *state) {
@@ -90,7 +95,7 @@ static NSInteger WPPostsPageSize = 25;
 {
     return [[self.stateMachine.stateChanged
         take:1]
-        flattenMap:^RACStream *(WPPostsState *value) {
+        flattenMap:^RACSignal *(WPPostsState *value) {
             NSInteger index = [[[value items] array] indexOfObject:postsItemState];
             if (index == NSNotFound) return [RACSignal empty];
 

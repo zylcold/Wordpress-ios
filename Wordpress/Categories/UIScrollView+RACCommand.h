@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface UIScrollView (RACCommand_PullToRefresh)
 

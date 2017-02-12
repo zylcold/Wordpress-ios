@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "WPPostsItemStateImp.h"
 #import "WPPost.h"
@@ -21,6 +21,11 @@
 @end
 
 @implementation WPPostsItemState
+
+- (instancetype)init
+{
+    return [self initWithPost:nil];
+}
 
 - (instancetype)initWithPost:(WPPost *)post
 {
