@@ -9,7 +9,6 @@
 #import "WPSite.h"
 
 #import "NSValueTransformer+Factory.h"
-
 @implementation WPSite
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey

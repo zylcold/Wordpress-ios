@@ -57,9 +57,9 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
-  - Mantle (1.5.4):
-    - Mantle/extobjc (= 1.5.4)
-  - Mantle/extobjc (1.5.4)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
   - OCMock (3.1.2)
   - ReactiveObjC (2.1.2)
   - SDWebImage (3.7.2):
@@ -74,7 +74,7 @@ DEPENDENCIES:
   - ComponentKit (~> 0.10)
   - Expecta (~> 0.3.1)
   - libextobjc (~> 0.4.1)
-  - Mantle (~> 1.5.1)
+  - Mantle (~> 2.1.0)
   - OCMock (~> 3.1.1)
   - ReactiveObjC (~> 2.1.2)
   - SDWebImage (~> 3.7.1)
@@ -97,7 +97,7 @@ SPEC CHECKSUMS:
   ComponentKit: 4bf3ce82a9e28f2ec26ba112102a2120ef312aa6
   Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
-  Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
@@ -105,6 +105,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 
-PODFILE CHECKSUM: 3803b034a264ec9d1b0fbfb651aefba7a552152c
+PODFILE CHECKSUM: f8441683337e4cf5b6dffd626340c000b0203cb4
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.2.0.beta.1

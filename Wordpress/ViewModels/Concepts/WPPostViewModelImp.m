@@ -53,7 +53,7 @@
     return [[RACSignal
         defer:^RACSignal *{
             WPGetPostRequest *request = [[WPGetPostRequest alloc] init];
-            request.fields = @[ @"ID", @"site_ID", @"author", @"comment_count", @"content", @"URL", @"title" ];
+//            request.fields = @[ @"ID", @"site_ID", @"author", @"comment_count", @"content", @"URL", @"title" ];
             request.routeObject = self.post;
 
             return [[WPClient sharedInstance] performRequest:request];

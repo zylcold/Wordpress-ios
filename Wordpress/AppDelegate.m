@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Evgeniy Yurtaev. All rights reserved.
 //
 
-#import <libextobjc/extobjc.h>
+//#import <libextobjc/extobjc.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 
 #import "AppDelegate.h"

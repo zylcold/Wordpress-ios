@@ -13,7 +13,7 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{
-        @keypath([WPRequest new], routeObject): [NSNull null],
+        @keypath([WPRequest new], routeObject): @"routeObject",
     };
 }
 
