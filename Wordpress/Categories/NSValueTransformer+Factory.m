@@ -13,14 +13,14 @@
 
 + (NSValueTransformer *)wp_URLValueTansformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *value, BOOL *success, NSError **error) {
         if ([value length] < 1) {
             return nil;
         }
         NSURL *URL = [NSURL URLWithString:value];
         
         return URL;
-    } reverseBlock:^id(NSURL *value) {
+    } reverseBlock:^id(NSURL *value, BOOL *success, NSError **error) {
         
         NSString *stringURL = [value absoluteString];
         return stringURL;
@@ -36,7 +36,7 @@
         [dateFormatter setDateFormat:@"YYYY'-'MM'-'DD'T'HH':'mm':'sszzz"];
     });
     
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *value, BOOL *success, NSError **error) {
         if (!value) {
             return nil;
         }
@@ -44,7 +44,7 @@
         
         return date;
     
-    } reverseBlock:^id(NSDate *value) {
+    } reverseBlock:^id(NSDate *value, BOOL *success, NSError **error) {
         if (!value) {
             return nil;
         }
@@ -56,9 +56,9 @@
 
 + (NSValueTransformer *)wp_arrayValueTransformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *value, BOOL *success, NSError **error) {
         return [value componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
-    } reverseBlock:^id(NSArray *value) {
+    } reverseBlock:^id(NSArray *value, BOOL *success, NSError **error) {
         return [value componentsJoinedByString:@","];
     }];
 }

@@ -33,13 +33,13 @@
 
 + (NSValueTransformer *)emailJSONTransformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(id value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError **error) {
         if ([value isKindOfClass:[NSString class]]) {
             return value;
         } else {
             return nil;
         }
-    } reverseBlock:^id(NSString *value) {
+    } reverseBlock:^id(NSString *value, BOOL *success, NSError **error) {
         return value;
     }];
 }

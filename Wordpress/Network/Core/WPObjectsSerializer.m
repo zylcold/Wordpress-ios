@@ -19,7 +19,7 @@
 
 - (NSDictionary *)deserializeObject:(MTLModel<MTLJSONSerializing> *)object error:(NSError *__autoreleasing *)error
 {
-    return [MTLJSONAdapter JSONDictionaryFromModel:object];
+    return [MTLJSONAdapter JSONDictionaryFromModel:object error:nil];
 }
 
 @end

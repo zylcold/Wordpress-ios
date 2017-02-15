@@ -48,7 +48,7 @@
 
 + (NSValueTransformer *)authorJSONTransformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSDictionary *value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSDictionary *value, BOOL *success, NSError **errorInfo) {
         if (!value) {
             return nil;
         }
@@ -60,11 +60,11 @@
         
         return author;
         
-    } reverseBlock:^id(WPUser *value) {
+    } reverseBlock:^id(WPUser *value, BOOL *success, NSError **error) {
         if (!value) {
             return nil;
         }
-        return [MTLJSONAdapter JSONDictionaryFromModel:value];
+        return [MTLJSONAdapter JSONDictionaryFromModel:value error:nil];
     }];
 }
 
@@ -90,7 +90,7 @@
 
 + (NSValueTransformer *)statusJSONTransformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *value, BOOL *success, NSError **error) {
         WPPostStatus status = WPPostStatusUnknown;
         if ([value isEqualToString:@"publish"]) {
             status = WPPostStatusPublish;
@@ -109,7 +109,7 @@
         }
         return @(status);
         
-    } reverseBlock:^id(NSNumber *value) {
+    } reverseBlock:^id(NSNumber *value, BOOL *success, NSError **error) {
         WPPostStatus status = [value integerValue];
         NSString *result;
         
@@ -161,7 +161,7 @@
 
 + (NSValueTransformer *)formatJSONTransformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *value, BOOL *success, NSError **error) {
         WPPostFormat format = WPPostFormatUnknown;
 
         if ([value isEqualToString:@"standard"]) {
@@ -187,7 +187,7 @@
         }
         return @(format);
         
-    } reverseBlock:^id(NSNumber *value) {
+    } reverseBlock:^id(NSNumber *value, BOOL *success, NSError **error) {
         WPPostFormat format = [value integerValue];
         NSString *result;
         

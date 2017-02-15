@@ -43,7 +43,7 @@ static NSString *const WPUserDefaultsKeyCurrentSite = @"WPUserDefaultsKeyCurrent
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if (_currentSite) {
-        NSDictionary *dictionaryRepresentation = [MTLJSONAdapter JSONDictionaryFromModel:_currentSite];
+        NSDictionary *dictionaryRepresentation = [MTLJSONAdapter JSONDictionaryFromModel:_currentSite error:nil];
         dictionaryRepresentation = [dictionaryRepresentation wp_dictionaryByRemovingNullValues];
         
         [userDefaults setObject:dictionaryRepresentation forKey:WPUserDefaultsKeyCurrentSite];

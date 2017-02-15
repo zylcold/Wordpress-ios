@@ -21,7 +21,7 @@
 
 + (NSValueTransformer *)postsJSONTransformer
 {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSArray *value) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSArray *value, BOOL *success, NSError **errorInfo) {
         if (![value isKindOfClass:[NSArray class]]) {
             return nil;
         }
@@ -34,11 +34,11 @@
         
         return result;
         
-    } reverseBlock:^id(NSArray *value) {
+    } reverseBlock:^id(NSArray *value, BOOL *success, NSError **error) {
         if (!value) {
             return nil;
         }
-        return [MTLJSONAdapter JSONArrayFromModels:value];
+        return [MTLJSONAdapter JSONArrayFromModels:value error:nil];
     }];
 }
 
